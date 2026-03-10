@@ -198,6 +198,11 @@ function registerModules(payload) {
   };
 }
 
+app.get("/", (req, res) => {
+	res.send("Server is running....");
+});
+
+
 app.get('/api/health', (_req, res) => {
   res.json({ ok: true, service: 'sdlc-control-plane', time: nowIso() });
 });
@@ -337,5 +342,5 @@ app.use('/api/audit-logs', auditRouter);
 app.use('/api/commands', commandsRouter);
 
 app.listen(PORT, () => {
-  console.log(`SDLC control plane API listening on http://localhost:${PORT}`);
+  console.log(`IT s changing API listening on http://localhost:${PORT}`);
 });
