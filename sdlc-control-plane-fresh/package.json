@@ -1,0 +1,11 @@
+{
+  "name": "sdlc-control-plane",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "install:all": "npm install --prefix server && npm install --prefix web",
+    "dev:server": "npm --prefix server run dev",
+    "dev:web": "npm --prefix web run dev",
+    "build:web": "npm --prefix web run build"
+  }
+}
